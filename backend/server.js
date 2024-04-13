@@ -1,10 +1,14 @@
 const express = require('express');
-const { errorHandler } = require('./middleware/errorMiddleware');
+const colors = require('colors');
 const dotenv = require('dotenv').config();
+const connectDB = require('./config/db');
+const { errorHandler } = require('./middleware/errorMiddleware');
 
 const PORT = process.env.PORT || 8000
-
 const app = express()
+
+//Connect to MongoDB Database
+connectDB()
 
 //Middleware
 app.use(express.json())
