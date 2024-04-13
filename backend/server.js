@@ -5,11 +5,11 @@ const connectDB = require('./config/db');
 const { errorHandler } = require('./middleware/errorMiddleware');
 
 const PORT = process.env.PORT || 8000
-const app = express()
 
 //Connect to MongoDB Database
 connectDB()
 
+const app = express()
 //Middleware
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
