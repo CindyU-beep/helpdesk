@@ -1,9 +1,10 @@
 import {useState, useEffect} from 'react';
 import {FaUser} from 'react-icons/fa';
-import { toast } from 'react-toastify';
+import Spinner from '../components/Spinner'
 import {useSelector, useDispatch} from 'react-redux';
 import {register, reset} from '../features/auth/authSlice';
 import {useNavigate} from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 function Register() {
 
@@ -36,9 +37,9 @@ function Register() {
         } 
         //redirect when logged in
         if(isSuccess || user) {
-            navigate('/home')            
+            navigate('/')            
         }
-        dispatch(reset)
+        dispatch(reset())
 
     }, [isError, isSuccess, user, message, navigate, dispatch])
 
@@ -57,6 +58,10 @@ function Register() {
        }
     }
 
+    if (isLoading) {
+        return <Spinner/>
+    }
+    
     return(
         <div>
            <section>
