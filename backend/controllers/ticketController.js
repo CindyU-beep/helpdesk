@@ -1,9 +1,6 @@
-
 const asyncHandler = require('express-async-handler')
-
 const User = require('../models/userModel')
 const Ticket = require('../models/ticketModel')
-const { request } = require('express')
 
 // @desc Get user tickets
 // @route GET /api/tickets
@@ -70,7 +67,7 @@ const createTicket = asyncHandler(async (req, res) => {
         product,
         description,
         user: req.user._id,
-        status: 'New'
+        status: 'new'
     })
     res.status(201).json(ticket)
 })
