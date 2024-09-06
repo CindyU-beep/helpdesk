@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 * {
@@ -28,7 +31,6 @@ li {
   line-height: 2.2;
 }
 
-h1,
 h2,
 h3 {
   font-weight: 600;
@@ -396,7 +398,7 @@ footer {
   }
 
   .ticket-created h2,
-  .heading h1 {
+  .heading {
     font-size: 2rem;
   }
 
