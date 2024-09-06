@@ -62,7 +62,7 @@ function Login() {
     <>
       <div className="flex flex-col w-full md:w-1/2 xl:w-3/5 2xl:w-3/5 3xl:w-2/3 mx-auto p-8 md:p-10 2xl:p-12 3xl:p-14 bg-[#ffffff] rounded-2xl shadow-xl">
         <h1 className="text-3xl font-bold text-[#4B5563] text-[#4B5563] my-auto">
-          Helpdesk
+          Login to Helpdesk
         </h1>
         <div className="text-sm font-light text-[#6B7280] pb-8 ">
           Login to your account
@@ -71,7 +71,7 @@ function Login() {
           <div className="pb-2">
             <label
               for="email"
-              className="block mb-2 text-sm font-medium text-[#111827]"
+              className="content-left block mb-2 text-sm font-medium text-[#111827] text-left"
             >
               Email
             </label>
@@ -101,7 +101,7 @@ function Login() {
                 onChange={onChange}
                 className="pl-12 mb-2 bg-gray-50 text-gray-600 border focus:border-transparent border-gray-300 sm:text-sm rounded-lg ring ring-transparent focus:ring-1 focus:outline-none focus:ring-gray-400 block w-full p-2.5 rounded-l-lg py-3 px-4"
                 placeholder="name@company.com"
-                autocomplete="off"
+                autocomplete="on"
                 required
               />
             </div>
@@ -109,7 +109,7 @@ function Login() {
           <div className="pb-6">
             <label
               for="password"
-              className="block mb-2 text-sm font-medium text-[#111827]"
+              className="content-left block mb-2 text-sm font-medium text-[#111827] text-left"
             >
               Password
             </label>
