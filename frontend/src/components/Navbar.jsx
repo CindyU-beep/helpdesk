@@ -16,25 +16,39 @@ function Navbar() {
   return (
     <header className="header">
       <div className="logo">
-        <Link to="/">Support Desk</Link>
+        <Link
+          to="/"
+          className="text-s font-semibold text-gray-500 tracking-wide uppercase mb-3 dark:text-neutral-200"
+        >
+          Customer Support Desk
+        </Link>
       </div>
       <ul>
         {user ? (
           <li>
-            <button className="btn" onClick={onLogout}>
-              <FaSignOutAlt /> Logout
+            <button
+              className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+              onClick={onLogout}
+            >
+              Logout
             </button>
           </li>
         ) : (
           <>
             <li>
-              <Link to="/login">
-                <FaSignInAlt /> Login
+              <Link
+                to="/login"
+                className="py-3 px-4 inline-flex justify-center items-center text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+              >
+                Login
               </Link>
             </li>
             <li>
-              <Link to="/register">
-                <FaUser /> Register
+              <Link
+                to="/register"
+                className="py-3 px-4 inline-flex justify-center items-center text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+              >
+                Register
               </Link>
             </li>
           </>
