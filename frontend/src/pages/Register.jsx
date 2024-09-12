@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { register, reset } from '../features/auth/authSlice';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { FaExclamation } from 'react-icons/fa';
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -241,7 +240,7 @@ function Register() {
             Already have an account?{' '}
             <Link
               to="/login"
-              classNameName="font-medium text-[#4F46E5] hover:underline"
+              className="font-medium text-[#4F46E5] hover:underline"
             >
               {' '}
               Log In

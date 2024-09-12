@@ -45,27 +45,59 @@ function NewTicket() {
   };
   return (
     <>
-      <BackButton url="/" />
-      <section className="heading">
-        <h1>Create New Ticket</h1>
-        <p>Please fill out the form below</p>
-      </section>
+      <BackButton />
 
-      <section className="form">
-        <div className="form-group">
-          <label htmlFor="name"> Customer name</label>
-          <input className="form-control" value={name} disabled />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email"> Customer email</label>
-          <input className="form-control" value={email} disabled />
-        </div>
+      <div className="max-w-xl mx-auto text-center">
+        <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">
+          Create New Ticket
+        </h1>
+        <p className="mt-1 text-gray-600 dark:text-neutral-400">
+          Need Assistance? Create a ticket and get support today.
+        </p>
 
-        <form onSubmit={onSubmit}>
-          <div className="form-group">
-            <label htmlFor="product"> Product </label>
+        <form
+          onSubmit={onSubmit}
+          className="mt-12 flex flex-col grid gap-4 lg:gap-6"
+        >
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+            <section>
+              <label
+                htmlFor="name"
+                className="text-left block mb-2 text-sm text-gray-700 font-medium dark:text-white"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                value={name}
+                disabled
+                className="py-3 px-4 block w-full rounded-lg text-sm border-blue-500 disabled:opacity-85 disabled:bg-blue-100"
+              />
+            </section>
+            <section>
+              <label
+                htmlFor="email"
+                className="text-left block mb-2 text-sm text-gray-700 font-medium dark:text-white"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                value={email}
+                disabled
+                className="py-3 px-4 block w-full rounded-lg text-sm disabled:opacity-85 disabled:bg-blue-100"
+              />
+            </section>
+          </div>
+          <section>
+            <label
+              htmlFor="product"
+              class="text-left block mb-2 text-sm text-gray-700 font-medium dark:text-white"
+            >
+              Product
+            </label>
             <select
-              className="form-control"
+              class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:bg-neutral-100 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
               value={product}
               onChange={(e) => setProduct(e.target.value)}
             >
@@ -75,26 +107,34 @@ function NewTicket() {
               <option value="Accessories">Accessories</option>
               Select a product
             </select>
-          </div>
-          <div className="form-group">
-            <label htmlFor="description">Description of the issue</label>
+          </section>
+          <section>
+            <label
+              htmlFor="description"
+              className="text-left block mb-2 text-sm text-gray-700 font-medium dark:text-white"
+            >
+              Description
+            </label>
             <textarea
-              className="form-control"
-              placeholder="Description"
+              placeholder="Overview of the issue"
               name="description"
               id="description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
+              class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:bg-neutral-100 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
             />
-          </div>
-
-          <form-group>
-            <button type="submit" className="btn btn-block">
-              Submit
-            </button>
-          </form-group>
+          </section>
+          <button
+            type="submit"
+            className="mt-6 grid w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+          >
+            Submit
+          </button>
+          <p className="mt-3 text-center text-sm text-gray-500 dark:text-neutral-500">
+            Our staff will get back to you as soon as they can
+          </p>
         </form>
-      </section>
+      </div>
     </>
   );
 }
