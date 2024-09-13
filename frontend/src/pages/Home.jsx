@@ -80,6 +80,7 @@ function Home() {
             View Tickets
           </Link>
         </div>
+        
         <div
           className="hidden absolute top-2/4 start-0 transform -translate-y-2/4 -translate-x-40 md:block lg:-translate-x-80"
           aria-hidden="true"

@@ -45,7 +45,7 @@ function NewTicket() {
   };
   return (
     <>
-      <BackButton />
+      <BackButton url="/" />
 
       <div className="max-w-xl mx-auto text-center">
         <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">

@@ -1,11 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getTicket, reset, closeTicket } from '../features/tickets/ticketSlice';
-import {
-  getNotes,
-  createNote,
-  reset as notesReset,
-} from '../features/notes/noteSlice';
+import { getNotes, createNote } from '../features/notes/noteSlice';
 import NoteItem from '../components/NoteItem';
 import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
@@ -88,8 +84,8 @@ function Ticket() {
     closeModal();
   };
   return (
-    <>
-      <div className="ticket-page">
+    <div className="w-3/4 mx-auto">
+      <div className=" ticket-page">
         <header className="ticket-header">
           <BackButton url="/tickets" />
           <h2>
@@ -150,7 +146,7 @@ function Ticket() {
           </button>
         )}
       </div>
-    </>
+    </div>
   );
 }
 

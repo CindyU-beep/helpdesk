@@ -64,7 +64,7 @@ function Register() {
 
   return (
     <>
-      <div className="flex flex-col w-full md:w-1/2 xl:w-3/5 2xl:w-3/5 3xl:w-2/3 mx-auto p-8 md:p-10 2xl:p-12 3xl:p-14 bg-[#ffffff] rounded-2xl shadow-xl">
+      <div className="w-3/4 flex flex-col w-full md:w-1/2 xl:w-3/5 2xl:w-3/5 3xl:w-2/3 mx-auto p-8 md:p-10 2xl:p-12 3xl:p-14 bg-[#ffffff] rounded-2xl shadow-xl">
         <div className="flex flex-col justify-center mx-auto items-center gap-3 pb-4">
           <h1 className="text-3xl font-bold text-[#4B5563] text-[#4B5563] my-auto">
             Register for Helpdesk

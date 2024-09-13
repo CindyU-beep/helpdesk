@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Router>
-        <div className="container">
+        <div className="overflow-x-hidden text-center mx-auto">
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />} />
